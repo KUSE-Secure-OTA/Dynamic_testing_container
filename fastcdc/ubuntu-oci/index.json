@@ -1,0 +1,1 @@
+{"schemaVersion":2,"manifests":[{"mediaType":"application/vnd.oci.image.manifest.v1+json","digest":"sha256:cb96de8d3081f5cd7d82e851c3960e42247bc4cdb0aa137ce798ce8e0ec73c53","size":350,"annotations":{"org.opencontainers.image.ref.name":"docker.io/library/ubuntu:22.04"}}]}
