@@ -1,0 +1,10 @@
+prefix=/home/hanbin/install_folder
+exec_prefix=/home/hanbin/install_folder
+libdir=/home/hanbin/install_folder/lib
+includedir=/home/hanbin/install_folder/include
+
+Name: 
+Description: New SOME/IP stack, feature complete
+Version: 3.5.4
+Libs: -L${libdir} -lvsomeip3
+Cflags: -I${includedir}

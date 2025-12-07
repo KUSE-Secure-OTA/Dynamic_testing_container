@@ -1,0 +1,186 @@
+{
+	"BUILD_DIR" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug/Head_Unit_app_autogen",
+	"CMAKE_BINARY_DIR" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app",
+	"HEADERS" : 
+	[
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/battery.h",
+			"MU",
+			"EWIEGA46WW/moc_battery.cpp"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/carInfoController.h",
+			"MU",
+			"EWIEGA46WW/moc_carInfoController.cpp"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/current_clock.h",
+			"MU",
+			"EWIEGA46WW/moc_current_clock.cpp"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/gearController.h",
+			"MU",
+			"EWIEGA46WW/moc_gearController.cpp"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/mapController.h",
+			"MU",
+			"EWIEGA46WW/moc_mapController.cpp"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/mp3player.h",
+			"MU",
+			"EWIEGA46WW/moc_mp3player.cpp"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/otaUpdate.h",
+			"MU",
+			"EWIEGA46WW/moc_otaUpdate.cpp"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/usbscanner.h",
+			"MU",
+			"EWIEGA46WW/moc_usbscanner.cpp"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/weather.h",
+			"MU",
+			"EWIEGA46WW/moc_weather.cpp"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/youtubeController.h",
+			"MU",
+			"EWIEGA46WW/moc_youtubeController.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug/Head_Unit_app_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug/Head_Unit_app_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_MULTIMEDIA_LIB",
+		"QT_NETWORK_LIB",
+		"QT_POSITIONING_LIB",
+		"QT_QML_DEBUG",
+		"QT_QML_LIB",
+		"QT_QUICK_LIB",
+		"QT_WEBCHANNEL_LIB",
+		"QT_WEBENGINECORE_LIB",
+		"QT_WEBENGINE_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug",
+		"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app",
+		"/home/hanbin/OTA/Head-Unit/src-gen",
+		"/home/hanbin/OTA/Head-Unit/install_folder/include/CommonAPI-3.2",
+		"/home/hanbin/OTA/Head-Unit/install_folder/include",
+		"/home/hanbin/OTA/Head-Unit/install_folder/lib",
+		"/home/hanbin/OTA/Head-Unit/src-gen/core",
+		"/home/hanbin/OTA/Head-Unit/src-gen/someip",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtQuick",
+		"/usr/include/x86_64-linux-gnu/qt5/QtQml",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWebEngine",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWebEngineCore",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWebChannel",
+		"/usr/include/x86_64-linux-gnu/qt5/QtPositioning",
+		"/usr/include/x86_64-linux-gnu/qt5/QtMultimedia",
+		"/usr/include",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/g++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug/Head_Unit_app_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug/IC_someip-someip_autogen/mocs_compilation.cpp"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 14,
+	"PARSE_CACHE_FILE" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug/CMakeFiles/Head_Unit_app_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug/CMakeFiles/Head_Unit_app_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/battery.cpp",
+			"MU"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/carInfoController.cpp",
+			"MU"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/main.cpp",
+			"MU"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/mapController.cpp",
+			"MU"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/mp3player.cpp",
+			"MU"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/otaUpdate.cpp",
+			"MU"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/usbscanner.cpp",
+			"MU"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/weather.cpp",
+			"MU"
+		],
+		[
+			"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/youtubeController.cpp",
+			"MU"
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : 
+	[
+		"/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug/IC_someip-someip_autogen/mocs_compilation.cpp"
+	],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

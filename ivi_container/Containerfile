@@ -1,0 +1,73 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    TZ=Asia/Seoul
+
+# 1) 기본 패키지 + Qt5 + QtWebEngine 설치
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      ca-certificates locales tzdata sudo \
+      bash coreutils findutils file \
+      libgl1 libglu1-mesa \
+      qtbase5-dev qtdeclarative5-dev \
+      qml-module-qtquick2 \
+      qml-module-qtquick-window2 \
+      qml-module-qtquick-controls \
+      qml-module-qtquick-controls2 \
+      qml-module-qtgraphicaleffects \
+      qml-module-qtwebengine \
+      libqt5webengine5 libqt5webenginecore5 libqt5webenginewidgets5 \
+      libnss3 libxss1 libasound2 libxkbcommon-x11-0 \
+      fonts-noto-cjk && \
+    rm -rf /var/lib/apt/lists/*
+
+# 로케일(옵션)
+RUN sed -i 's/^# *\(en_US.UTF-8 UTF-8\)/\1/' /etc/locale.gen && locale-gen
+
+# 2) 프로젝트 전체를 /app 아래로 복사
+WORKDIR /app
+COPY . /app
+
+# 3) 라이브러리를 표준 경로(/usr/local/lib)로 복사
+#    - install_folder/lib : CommonAPI + vsomeip
+#    - lib/               : Boost 1.71 + CommonAPI(-SomeIP)
+RUN mkdir -p /usr/local/lib && \
+    \
+    # CommonAPI, vsomeip (install_folder/lib 기준)
+    cp -av /app/install_folder/lib/libCommonAPI*.so* /usr/local/lib/ 2>/dev/null || true && \
+    cp -av /app/install_folder/lib/libvsomeip*.so*  /usr/local/lib/ 2>/dev/null || true && \
+    \
+    # lib/ 안의 CommonAPI / SomeIP / Boost 1.71도 같이 등록
+    cp -av /app/lib/libCommonAPI*.so*        /usr/local/lib/ 2>/dev/null || true && \
+    cp -av /app/lib/libCommonAPI-SomeIP*.so* /usr/local/lib/ 2>/dev/null || true && \
+    cp -av /app/lib/libboost_*.so.1.71.0     /usr/local/lib/ 2>/dev/null || true && \
+    \
+    # 필요하다면 공용 이름(libboost_xxx.so)도 1.71로 링크 (선택)
+    bash -lc 'for so in thread system chrono filesystem date_time atomic regex program_options; do \
+      if [ -e /usr/local/lib/libboost_${so}.so.1.71.0 ]; then \
+        ln -sf libboost_${so}.so.1.71.0 /usr/local/lib/libboost_${so}.so; \
+      fi; \
+    done' && \
+    \
+    # 동적 로더 캐시 갱신
+    ldconfig
+
+# 4) HU.sh 정리: shebang, CRLF 제거, 실행 권한
+RUN sed -i '1s|^#!.*bash|#!/bin/bash|' /app/HU.sh && \
+    (grep -q $'\r' /app/HU.sh && tr -d '\r' < /app/HU.sh > /app/HU.sh.fix && mv /app/HU.sh.fix /app/HU.sh || true) && \
+    chmod +x /app/HU.sh
+
+# 5) QtWebEngine / X11 관련 환경변수
+#    - QT_QPA_PLATFORM=xcb : X11 기반 (호스트 X 서버에 붙기 위함)
+#    - XDG_RUNTIME_DIR     : Qt/QtWebEngine 런타임 디렉터리
+#    - QTWEBENGINE_*       : root + --no-sandbox (지금까지 쓰던 "방법 A")
+ENV QT_QPA_PLATFORM=xcb \
+    XDG_RUNTIME_DIR=/tmp/runtime-root \
+    QTWEBENGINE_DISABLE_SANDBOX=1 \
+    QTWEBENGINE_CHROMIUM_FLAGS=--no-sandbox
+
+# 6) ENTRYPOINT
+#    - XDG_RUNTIME_DIR 생성 + 권한(700)
+#    - HU.sh 실행 (HU.sh 안에서 LD_LIBRARY_PATH, COMMONAPI_CONFIG, VSOMEIP_* 등 이미 설정)
+ENTRYPOINT ["/bin/bash","-lc","mkdir -p $XDG_RUNTIME_DIR && chmod 700 $XDG_RUNTIME_DIR && exec /app/HU.sh"]
+

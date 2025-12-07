@@ -1,0 +1,153 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "CMakeFiles/version_note_obj.dir/version_note.S.o"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_dependencies",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 48,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 74,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 133,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g  "
+				}
+			],
+			"includes" : 
+			[
+				{
+					"path" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug"
+				},
+				{
+					"path" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/usr/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/../../../src-gen"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/../../../install_folder/include/CommonAPI-3.2"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/../../../install_folder/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/../../../install_folder/lib"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/../../../src-gen/core"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/Head_Unit_app/../../../src-gen/someip"
+				}
+			],
+			"language" : "ASM",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "generate_version_note::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "version_note_obj::@6890427a1f51a3e7e1df",
+	"name" : "version_note_obj",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug/version_note.S",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/hanbin/OTA/Head-Unit/Head_Unit/v0.0.0/build-Head_Unit_app-Desktop-Debug/version_note.S.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}
