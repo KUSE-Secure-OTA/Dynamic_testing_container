@@ -52,6 +52,9 @@ RUN mkdir -p /usr/local/lib && \
     # 동적 로더 캐시 갱신
     ldconfig
 
+COPY verify-probe.sh /usr/local/bin/verify-probe
+RUN chmod +x /usr/local/bin/verify-probe
+
 # 4) HU.sh 정리: shebang, CRLF 제거, 실행 권한
 RUN sed -i '1s|^#!.*bash|#!/bin/bash|' /app/HU.sh && \
     (grep -q $'\r' /app/HU.sh && tr -d '\r' < /app/HU.sh > /app/HU.sh.fix && mv /app/HU.sh.fix /app/HU.sh || true) && \
