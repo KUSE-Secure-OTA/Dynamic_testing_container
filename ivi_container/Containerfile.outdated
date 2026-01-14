@@ -1,2 +1,9 @@
 FROM ivi_base:1.0
-RUN apt-get update && apt-get install -y --no-install-recommends openssl && rm -rf /var/lib/apt/lists/*
+
+# pip 먼저 설치
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends python3-pip && \
+    rm -rf /var/lib/apt/lists/*
+
+# 오래된 패키지 설치 (CVE WARN용)
+RUN python3 -m pip install --no-cache-dir "Django==1.2.2"

@@ -1,0 +1,4 @@
+FROM ivi_base:1.0
+
+RUN mkdir -p /licenses
+COPY AGPL-3.0.txt /licenses/AGPL-3.0.txt
