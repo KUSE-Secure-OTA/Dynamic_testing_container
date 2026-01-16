@@ -1,4 +1,28 @@
 FROM ivi_base:1.0
 
-RUN mkdir -p /licenses
-COPY AGPL-3.0.txt /licenses/AGPL-3.0.txt
+RUN set -eux; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends dpkg-dev; \
+    mkdir -p /tmp/agpl-demo/DEBIAN /tmp/agpl-demo/usr/share/doc/agpl-demo; \
+    \
+    printf '%s\n' \
+      'Package: agpl-demo' \
+      'Version: 1.0' \
+      'Section: misc' \
+      'Priority: optional' \
+      'Architecture: all' \
+      'Maintainer: demo (demo@example.com)' \
+      'Description: Demo package to validate AGPL license policy' \
+      > /tmp/agpl-demo/DEBIAN/control; \
+    \
+    printf '%s\n' \
+      'Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/' \
+      'Upstream-Name: agpl-demo' \
+      'License: AGPL-3.0-only' \
+      ' This is a demo package for static license policy evaluation.' \
+      > /tmp/agpl-demo/usr/share/doc/agpl-demo/copyright; \
+    \
+    dpkg-deb --build /tmp/agpl-demo /tmp/agpl-demo.deb; \
+    dpkg -i /tmp/agpl-demo.deb; \
+    rm -rf /tmp/agpl-demo /tmp/agpl-demo.deb; \
+    rm -rf /var/lib/apt/lists/*
